@@ -1,15 +1,8 @@
 module Main where
 
-import Graphics.Gnuplot.Simple
+import Ch7
 
-type R = Double
-
-square :: R -> R
-square x = x ** 2
-
--- Ch7
-plot1 :: IO ()
-plot1 = plotFunc [] [-3, 2.99 .. 3] square
+-- import Ch9
 
 main :: IO ()
 main = do

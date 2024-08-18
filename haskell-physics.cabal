@@ -62,7 +62,7 @@ executable haskell-physics
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules: Ch7, Ch9
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -73,7 +73,9 @@ executable haskell-physics
       gnuplot
 
     -- Directories containing source files.
-    hs-source-dirs:   app
+    hs-source-dirs:   
+      app, 
+      src
 
     -- Base language which the package is written in.
     default-language: Haskell2010
