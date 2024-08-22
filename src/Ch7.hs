@@ -4,12 +4,6 @@ import Graphics.Gnuplot.Simple
 
 type R = Double
 
-type Integration =
-  (R -> R) -> -- function
-  R -> -- lower limit
-  R -> -- upper limit
-  R -- result
-
 square :: R -> R
 square x = x ** 2
 
