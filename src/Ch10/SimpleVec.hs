@@ -62,3 +62,13 @@ Vec ax ay az >< Vec bx by bz =
 
 vecDerivative :: R -> VecDerivative
 vecDerivative dt v t = (v (t + dt / 2) ^-^ v (t - dt / 2)) ^/ dt
+
+xCompFunc :: (R -> Vec) -> R -> R
+xCompFunc v t = xComp (v t)
+
+-- Scalar derivate
+-- TODO: Move to ch4. derivative was originally defined there.
+type Derivative = (R -> R) -> R -> R
+
+derivative :: R -> Derivative
+derivative dt x t = (x (t + dt / 2) - x (t - dt / 2)) / dt
