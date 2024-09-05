@@ -37,3 +37,21 @@ velocityCA vO aO t = aO ^* t ^+^ vO
 -- If acceleration is constant, position is a quadratic function of time
 positionCA :: PosVec -> Velocity -> Acceleration -> Time -> PosVec
 positionCA rO vO aO t = 0.5 *^ t ** 2 *^ aO ^+^ vO ^* t ^+^ rO
+
+-- If v(t) != 0, we can decompose acceleration into a component parallel to the velocity
+-- and a compont perpendicular to the velocity. 10.18
+aParallel :: Vec -> Vec -> Vec
+aParallel v a =
+  let vHat = v ^/ magnitude v
+   in (vHat <.> a) *^ vHat
+
+aPerp :: Vec -> Vec -> Vec
+aPerp v a = a ^-^ aParallel v a
+
+-- 10.20
+speedRateChange :: Vec -> Vec -> R
+speedRateChange v a = (v <.> a) / magnitude v
+
+-- 10.22
+radiusOfCurvature :: Vec -> Vec -> R
+radiusOfCurvature v a = (v <.> v) / magnitude (aPerp v a)
