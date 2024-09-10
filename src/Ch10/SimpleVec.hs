@@ -1,8 +1,5 @@
 module Ch10.SimpleVec where
 
-import Data.Bits (Bits (xor))
-import Data.Complex (magnitude)
-
 -- TODO: We could refactor this to work with (+) and other built-in operators.
 -- That would require typeclasses to impleent.
 
@@ -109,3 +106,16 @@ sumV = foldr (^+^) zeroV
 
 magnitude :: Vec -> R
 magnitude v = sqrt (v <.> v)
+
+-- TODO:
+--
+-- Exercise 10.2
+-- "For vector-valued functions of a real variable
+-- that is similar to the function `integral`"
+vecIntegral ::
+  R -> -- step size dt
+  (R -> Vec) -> -- vector-valued function
+  R -> -- lower limit
+  R -> -- upper limit
+  Vec -- result
+vecIntegral = undefined

@@ -10,6 +10,8 @@ type Velocity = Vec
 
 type Acceleration = Vec
 
+data Mass = Mass R deriving (Eq, Show)
+
 velFromPos ::
   R -> -- dt
   (Time -> PosVec) -> -- position function
@@ -55,3 +57,7 @@ speedRateChange v a = (v <.> a) / magnitude v
 -- 10.22
 radiusOfCurvature :: Vec -> Vec -> R
 radiusOfCurvature v a = (v <.> v) / magnitude (aPerp v a)
+
+-- 10.24
+projectilePos :: PosVec -> Velocity -> Time -> PosVec
+projectilePos rO vO = positionCA rO vO (9.81 *^ negateV kHat)
