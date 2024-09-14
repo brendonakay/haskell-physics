@@ -6,6 +6,6 @@ import Ch11
 
 main :: IO ()
 main = do
-  plot1
+  plot4
   _ <- getLine
   return ()
