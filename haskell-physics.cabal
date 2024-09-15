@@ -67,7 +67,9 @@ executable haskell-physics
       Ch9,
       Ch10.SimpleVec,
       Ch10.Kinematics3D,
-      Ch11
+      Ch11,
+      Ch12,
+      Ch13
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -75,7 +77,8 @@ executable haskell-physics
     -- Other library packages from which modules are imported.
     build-depends:    
       base ^>=4.18.2.1,
-      gnuplot
+      gnuplot,
+      gloss
 
     -- Directories containing source files.
     hs-source-dirs:   
