@@ -23,8 +23,6 @@
         libGL
         libGLU
         freeglut
-        mesa
-        mesa_glu
       ];
       LD_LIBRARY_PATH=with pkgs; "${freeglut}/lib";
     };
