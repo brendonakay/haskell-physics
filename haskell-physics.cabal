@@ -70,7 +70,8 @@ executable haskell-physics
       Ch11,
       Ch12,
       Ch13.TwoD,
-      Ch13.ThreeD
+      Ch13.ThreeD,
+      Ch14.Newton2
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
