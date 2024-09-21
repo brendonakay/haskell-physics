@@ -1,6 +1,6 @@
 module Main where
 
-import Ch13
+import Ch13.ThreeD
 
 main :: IO ()
-main = mainSimulate
+main = mainThreeDSimulation

@@ -1,4 +1,4 @@
-module Ch13 where
+module Ch13.TwoD where
 
 import Graphics.Gloss
 

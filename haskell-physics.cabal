@@ -69,7 +69,8 @@ executable haskell-physics
       Ch10.Kinematics3D,
       Ch11,
       Ch12,
-      Ch13
+      Ch13.TwoD,
+      Ch13.ThreeD
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -78,7 +79,10 @@ executable haskell-physics
     build-depends:    
       base ^>=4.18.2.1,
       gnuplot,
-      gloss
+      gloss,
+      not-gloss,
+      linear,
+      spatial-math
 
     -- Directories containing source files.
     hs-source-dirs:   
